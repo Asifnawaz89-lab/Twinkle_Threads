@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twinkle Threads — Luxury Kids Wear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#fcf8f9] text-gray-800 font-sans selection:bg-pink-500 selection:text-white">
+
+    <!-- Professional Glassmorphism Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-pink-100/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex justify-between items-center">
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-pink-600 focus:outline-none p-1">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center space-x-2 group">
+                <img src="images/logo.jpg" alt="Twinkle Threads" class="w-9 h-9 md:w-12 md:h-12 rounded-full object-cover shadow-md border-2 border-pink-300 group-hover:scale-105 transition duration-300">
+                <span class="text-xs sm:text-base md:text-xl font-black bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent tracking-tight">Twinkle Threads</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
+                <a href="#home" class="hover:text-pink-600 transition">Home</a>
+                <a href="#shop" class="hover:text-pink-600 transition">Shop</a>
+                <a href="#about" class="hover:text-pink-600 transition">About</a>
+                <a href="#feedback" class="hover:text-pink-600 transition">Reviews</a>
+                <a href="#contact" class="hover:text-pink-600 transition">Contact</a>
+            </nav>
+
+            <!-- Cart Button -->
+            <div class="flex items-center space-x-3">
+                <button id="cart-btn" class="relative bg-pink-50 hover:bg-pink-100 p-2.5 rounded-full transition border border-pink-200/80 shadow-sm flex items-center justify-center">
+                    🛒 <span id="cart-count" class="absolute -top-1 -right-1 bg-gradient-to-r from-pink-600 to-rose-600 text-white text-[10px] md:text-xs w-4 h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center font-bold shadow-md">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-pink-100 px-6 py-4 space-y-3 shadow-lg transition-all">
+            <a href="#home" class="mobile-nav-link block font-semibold text-gray-700 hover:text-pink-600 py-1.5">Home</a>
+            <a href="#shop" class="mobile-nav-link block font-semibold text-gray-700 hover:text-pink-600 py-1.5">Shop</a>
+            <a href="#about" class="mobile-nav-link block font-semibold text-gray-700 hover:text-pink-600 py-1.5">About Us</a>
+            <a href="#feedback" class="mobile-nav-link block font-semibold text-gray-700 hover:text-pink-600 py-1.5">Reviews</a>
+            <a href="#contact" class="mobile-nav-link block font-semibold text-gray-700 hover:text-pink-600 py-1.5">Contact</a>
+        </div>
+    </header>
+
+    <!-- Professional Split Hero Section (Optimized for Mobile) -->
+    <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Left Column: Content -->
+            <div class="lg:col-span-6 space-y-5 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-pink-100 text-pink-700 text-[11px] md:text-xs font-extrabold px-3.5 py-1.5 rounded-full border border-pink-200 shadow-sm uppercase tracking-wider">
+                    <span>✨ Luxury Kids Wear Collection</span>
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.15]">
+                    Dress Your Little Stars in <span class="bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent">Pure Elegance</span>
+                </h1>
+                
+                <p class="text-gray-600 text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    A stylish little wardrobe full of fashion for kids. Exclusive, comfortable, and trendy outfits designed for absolute charm, fun, and everyday play.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+                    <a href="#shop" class="w-full sm:w-auto bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3.5 rounded-2xl font-bold shadow-xl shadow-pink-600/25 hover:shadow-2xl hover:scale-105 transition duration-300 text-sm text-center">
+                        Explore Collection ✨
+                    </a>
+                    <a href="https://wa.me/923281017338?text=Assalam%20o%20Alaikum!%20I%20want%20to%20inquire%20about%20Twinkle%20Threads." target="_blank" class="w-full sm:w-auto bg-white text-gray-800 border border-gray-200 px-8 py-3.5 rounded-2xl font-bold hover:border-pink-300 hover:text-pink-600 transition duration-300 text-sm text-center shadow-sm">
+                        Chat on WhatsApp 💬
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Professional Banner Showcase Card -->
+            <div class="lg:col-span-6 relative">
+                <div class="absolute -inset-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-35 transition duration-1000 pointer-events-none"></div>
+                <div class="relative bg-white p-2.5 sm:p-4 rounded-3xl shadow-xl border-2 border-pink-100 overflow-hidden group">
+                    <img src="images/logo.jpg" alt="Twinkle Threads Banner" class="w-full h-[260px] sm:h-[380px] md:h-[440px] object-cover rounded-2xl transform group-hover:scale-102 transition duration-700">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-t border-pink-100/60">
+        <div class="text-center mb-8">
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">Curated Collections</h2>
+            <p class="text-gray-500 mt-1.5 text-xs sm:text-sm md:text-base">Handpicked premium styles for boys, girls, and little babies.</p>
+        </div>
+        
+        <!-- Category Filter Pills (Scrollable on Mobile) -->
+        <div class="flex justify-start sm:justify-center space-x-2 mb-8 overflow-x-auto pb-3 px-2">
+            <button class="filter-btn px-5 py-2 bg-gradient-to-r from-pink-600 to-rose-600 text-white rounded-full text-xs sm:text-sm font-bold shadow-md shadow-pink-500/20 transition flex-shrink-0" data-category="all">All Styles</button>
+            <button class="filter-btn px-5 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-xs sm:text-sm font-semibold hover:border-pink-300 hover:text-pink-600 transition shadow-sm flex-shrink-0" data-category="Boys">Boys</button>
+            <button class="filter-btn px-5 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-xs sm:text-sm font-semibold hover:border-pink-300 hover:text-pink-600 transition shadow-sm flex-shrink-0" data-category="Girls">Girls</button>
+            <button class="filter-btn px-5 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-xs sm:text-sm font-semibold hover:border-pink-300 hover:text-pink-600 transition shadow-sm flex-shrink-0" data-category="Baby">Baby</button>
+            <button class="filter-btn px-5 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-xs sm:text-sm font-semibold hover:border-pink-300 hover:text-pink-600 transition shadow-sm flex-shrink-0" data-category="Customized">Customized</button>
+        </div>
+
+        <!-- Products Grid (2 columns on mobile, 3-4 on desktop) -->
+        <div id="products-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+            <!-- Dynamic products will load here -->
+        </div>
+    </section>
+
+    <!-- Variant Selection Popup Modal -->
+    <div id="variant-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-4 shadow-2xl relative">
+            <button id="close-variant-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl font-bold">&times;</button>
+            <div>
+                <span class="text-xs font-bold text-pink-600 uppercase tracking-wide">Select Options</span>
+                <h3 id="modal-product-name" class="font-extrabold text-lg text-gray-900">Product Name</h3>
+            </div>
+            
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Select Size</label>
+                    <select id="modal-size-select" class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"></select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-1">Select Color</label>
+                    <select id="modal-color-select" class="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"></select>
+                </div>
+            </div>
+
+            <button id="confirm-add-to-cart-btn" class="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 rounded-xl font-bold hover:opacity-95 transition shadow-lg shadow-pink-500/20 text-sm">
+                Confirm & Add to Cart 🛒
+            </button>
+        </div>
+    </div>
+
+    <!-- Enhanced Image Gallery Lightbox Modal -->
+    <div id="image-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+        <div class="relative max-w-3xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl p-4 text-center flex flex-col items-center">
+            <button id="close-image-modal" class="absolute top-4 right-4 bg-gray-900 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold hover:bg-gray-700 transition z-20">&times;</button>
+            
+            <div class="relative w-full flex items-center justify-center my-auto min-h-[300px]">
+                <button id="prev-img-btn" class="absolute left-2 bg-pink-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-pink-700 transition z-10">&#10094;</button>
+                <img id="modal-preview-img" src="" alt="Product Preview" class="max-h-[70vh] max-w-full object-contain rounded-2xl mx-auto shadow-md">
+                <button id="next-img-btn" class="absolute right-2 bg-pink-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold shadow-lg hover:bg-pink-700 transition z-10">&#10095;</button>
+            </div>
+
+            <div id="img-counter" class="text-xs font-bold text-gray-600 bg-pink-50 px-4 py-1.5 rounded-full border border-pink-200 mt-3">1 / 1</div>
+        </div>
+    </div>
+
+    <!-- Ultra-Premium About Section -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <div class="relative rounded-3xl overflow-hidden shadow-xl border border-pink-200/80 bg-gradient-to-br from-pink-50/80 via-white to-purple-50/80 p-6 sm:p-10 md:p-14 text-center space-y-6">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-pink-200/30 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="inline-flex items-center space-x-2 bg-pink-100 text-pink-700 text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest border border-pink-200">
+                <svg class="w-4 h-4 fill-current text-pink-600" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>Our Boutique Story</span>
+            </div>
+            
+            <div class="flex items-center justify-center space-x-2">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 tracking-tight">About Twinkle Threads</h2>
+                <svg class="w-6 h-6 text-pink-500 animate-pulse" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            
+            <p class="text-gray-600 leading-relaxed text-xs sm:text-sm md:text-base max-w-3xl mx-auto font-medium">
+                Welcome to <strong>Twinkle Threads</strong>, your ultimate destination for stylish, premium quality, and comfortable kids' wear. We believe that little ones deserve outfits that are as vibrant, playful, and charming as they are. From casual daily wear to gorgeous custom outfits, we craft every thread with love and care.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-4 max-w-4xl mx-auto">
+                <div class="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-pink-100 shadow-sm space-y-2.5 flex flex-col items-center text-center">
+                    <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 shadow-inner">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-sm">Premium Fabrics</h3>
+                    <p class="text-xs text-gray-500">Soft, skin-friendly, and breathable materials for kids.</p>
+                </div>
+
+                <div class="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-pink-100 shadow-sm space-y-2.5 flex flex-col items-center text-center">
+                    <div class="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 shadow-inner">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-sm">Handcrafted Care</h3>
+                    <p class="text-xs text-gray-500">Designed with attention to detail and absolute elegance.</p>
+                </div>
+
+                <div class="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-pink-100 shadow-sm space-y-2.5 flex flex-col items-center text-center">
+                    <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shadow-inner">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-sm">Easy Ordering</h3>
+                    <p class="text-xs text-gray-500">Direct WhatsApp checkout with fast doorstep delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Feedback & Reviews Section -->
+    <section id="feedback" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 border-t border-pink-100/60">
+        <div class="text-center mb-10">
+            <span class="inline-block bg-pink-100 text-pink-700 text-xs font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider mb-2">⭐ Happy Parents</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">Customer Love & Reviews</h2>
+            <p class="text-gray-500 text-xs sm:text-sm mt-1">What our lovely customers say about Twinkle Threads outfits.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Review 1 -->
+            <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm space-y-3 relative">
+                <div class="flex text-amber-400 text-sm">★★★★★</div>
+                <p class="text-gray-600 text-xs sm:text-sm italic">"The fabric quality is exceptionally soft and comfortable for my toddler. Will definitely shop again!"</p>
+                <div class="flex items-center space-x-2 pt-2 border-t border-gray-50">
+                    <div class="w-8 h-8 rounded-full bg-pink-100 text-pink-600 font-bold flex items-center justify-center text-xs">A</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-xs">Ayesha Khan</h4>
+                        <span class="text-[10px] text-gray-400">Lahore</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm space-y-3 relative">
+                <div class="flex text-amber-400 text-sm">★★★★★</div>
+                <p class="text-gray-600 text-xs sm:text-sm italic">"Ordered a customized dress for my daughter's birthday. It looked stunning and fits perfectly!"</p>
+                <div class="flex items-center space-x-2 pt-2 border-t border-gray-50">
+                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 font-bold flex items-center justify-center text-xs">F</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-xs">Fatima Ahmed</h4>
+                        <span class="text-[10px] text-gray-400">Islamabad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white p-6 rounded-3xl border border-pink-100 shadow-sm space-y-3 relative">
+                <div class="flex text-amber-400 text-sm">★★★★★</div>
+                <p class="text-gray-600 text-xs sm:text-sm italic">"Super fast WhatsApp response and quick delivery. The stitching quality is top-notch."</p>
+                <div class="flex items-center space-x-2 pt-2 border-t border-gray-50">
+                    <div class="w-8 h-8 rounded-full bg-rose-100 text-rose-600 font-bold flex items-center justify-center text-xs">Z</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-xs">Zainab Malik</h4>
+                        <span class="text-[10px] text-gray-400">Faisalabad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Feedback Box -->
+        <div class="max-w-2xl mx-auto bg-gradient-to-br from-white to-pink-50/50 p-6 sm:p-8 rounded-3xl border border-pink-200 shadow-lg text-center space-y-4">
+            <h3 class="font-black text-lg text-gray-900">Share Your Experience With Us 💌</h3>
+            <p class="text-xs text-gray-600">We love hearing from you! Send your review or feedback directly to our WhatsApp.</p>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <input type="text" id="feedback-name" placeholder="Your Name" class="flex-1 px-4 py-3 bg-white border border-gray-200 rounded-2xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 shadow-sm">
+                <input type="text" id="feedback-city" placeholder="City" class="sm:w-36 px-4 py-3 bg-white border border-gray-200 rounded-2xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 shadow-sm">
+            </div>
+            <textarea id="feedback-msg" placeholder="Write your feedback or review here..." rows="3" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-2xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 shadow-sm"></textarea>
+            <button onclick="sendFeedbackWhatsApp()" class="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3.5 rounded-2xl font-bold hover:shadow-lg transition text-xs sm:text-sm shadow-md shadow-pink-500/20">
+                💬 Send Feedback on WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Floating Real WhatsApp Icon Button -->
+    <a href="https://wa.me/923281017338?text=Assalam%20o%20Alaikum!%20I%20want%20to%20inquire%20about%20Twinkle%20Threads." target="_blank" class="fixed bottom-5 right-5 bg-green-500 text-white p-3.5 rounded-full shadow-2xl hover:bg-green-600 flex items-center justify-center z-50 transition transform hover:scale-110">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.612-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <!-- Premium Cart Drawer Modal -->
+    <div id="cart-drawer" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden justify-end transition-opacity">
+        <div id="cart-overlay" class="absolute inset-0"></div>
+        <div class="relative bg-white w-full max-w-md h-full shadow-2xl flex flex-col justify-between p-6 z-10 overflow-y-auto">
+          <div>
+            <!-- Header -->
+            <div class="flex justify-between items-center pb-4 border-b border-pink-100">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xl">🛍️</span>
+                    <h2 class="text-lg font-black text-gray-900 tracking-tight">Shopping Bag</h2>
+                </div>
+                <button id="close-cart" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition font-bold">&times;</button>
+            </div>
+            
+            <!-- Cart Items Container -->
+            <div id="cart-items-container" class="py-4 space-y-3 max-h-[38vh] overflow-y-auto pr-1">
+                <!-- Cart items loaded dynamically -->
+            </div>
+
+            <!-- Shipping Details Form -->
+            <div class="pt-4 pb-2 space-y-3">
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm">📍</span>
+                    <h3 class="font-extrabold text-xs text-gray-800 tracking-wider uppercase">Shipping Details</h3>
+                </div>
+                <div class="space-y-2.5">
+                    <input type="text" id="cust-name" placeholder="Full Name" required class="w-full px-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition shadow-sm">
+                    <input type="tel" id="cust-phone" placeholder="Phone Number (e.g. 03001234567)" required class="w-full px-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition shadow-sm">
+                    <input type="text" id="cust-address" placeholder="Complete Street Address" required class="w-full px-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition shadow-sm">
+                    <input type="text" id="cust-city" placeholder="City (e.g. Lahore / Faisalabad)" required class="w-full px-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition shadow-sm">
+                </div>
+            </div>
+          </div>
+
+          <!-- Footer Subtotal & Checkout -->
+          <div class="border-t border-pink-100 pt-4 bg-white">
+              <div class="flex justify-between items-center mb-4 px-1">
+                  <span class="font-bold text-gray-600 text-sm">Subtotal</span>
+                  <span id="cart-subtotal" class="text-pink-600 font-black text-lg">Rs. 0</span>
+              </div>
+              <button id="whatsapp-checkout-btn" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 text-white py-4 rounded-2xl font-bold hover:shadow-xl hover:scale-[1.01] transition duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-green-500/25 text-sm">
+                  <span>📱 Send Order on WhatsApp</span>
+              </button>
+          </div>
+        </div>
+    </div>
+
+    <!-- Second Last Section: Direct Clickable Social Links -->
+    <section class="py-8 bg-white border-t border-pink-100 text-center">
+        <div class="max-w-7xl mx-auto px-6 space-y-3">
+            <h3 class="text-base sm:text-lg font-bold text-gray-900">Connect With Us 🌐</h3>
+            <div class="flex justify-center items-center space-x-3 flex-wrap gap-2">
+                <a href="https://instagram.com/twinkle_threads44" target="_blank" class="flex items-center space-x-2 bg-pink-50 hover:bg-pink-100 text-pink-600 px-3.5 py-2 rounded-full font-semibold border border-pink-200 transition shadow-sm text-xs sm:text-sm">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <span>@twinkle_threads44</span>
+                </a>
+
+                <a href="https://wa.me/923281017338?text=Assalam%20o%20Alaikum!%20I%20want%20to%20inquire%20about%20Twinkle%20Threads." target="_blank" class="flex items-center space-x-2 bg-green-50 hover:bg-green-100 text-green-600 px-3.5 py-2 rounded-full font-semibold border border-green-200 transition shadow-sm text-xs sm:text-sm">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.612-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <span>+92 328 1017338</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-6 text-center text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-6 space-y-1.5">
+            <p class="font-bold text-white text-sm sm:text-base">Twinkle Threads 🌟</p>
+            <p>© 2026 Twinkle Threads. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Feedback WhatsApp Script -->
+    <script>
+        function sendFeedbackWhatsApp() {
+            const name = document.getElementById("feedback-name").value.trim();
+            const city = document.getElementById("feedback-city").value.trim();
+            const msg = document.getElementById("feedback-msg").value.trim();
+
+            if (!name || !msg) {
+                alert("Please fill in your name and feedback message!");
+                return;
+            }
+
+            const text = `⭐ *Customer Feedback / Review*\n\n- Name: ${name}\n- City: ${city || 'Not specified'}\n- Feedback: ${msg}`;
+            const whatsappURL = `https://wa.me/923281017338?text=${encodeURIComponent(text)}`;
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

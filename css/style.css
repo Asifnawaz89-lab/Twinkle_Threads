@@ -1,0 +1,81 @@
+/* ==========================================
+   TWINKLE THREADS — ULTRA PREMIUM CSS
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #fff0f5;
+}
+::-webkit-scrollbar-thumb {
+    background: #f472b6;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #db2777;
+}
+
+/* Glassmorphism Effects */
+.glass-header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Premium Card Hover & Shadows */
+.product-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px -10px rgba(236, 72, 153, 0.15);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-badge {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient Button Glow */
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.btn-glow:after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+}
+.btn-glow:hover:after {
+    left: 100%;
+}
+
+/* Smooth Fade In for Modals / Drawers */
+#cart-drawer {
+    transition: opacity 0.3s ease;
+}
+
+/* Input Focus Glow */
+input:focus, select:focus {
+    border-color: #db2777 !important;
+    box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.15) !important;
+}
