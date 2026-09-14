@@ -1,8 +1,10 @@
 import { db, auth } from "./firebase-config.js";
 import {
     signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
     signOut,
-    onAuthStateChanged
+    onAuthStateChanged,
+    sendPasswordResetEmail
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 import {
@@ -17,7 +19,12 @@ import {
 const loginSection = document.getElementById("login-section");
 const dashboardSection = document.getElementById("dashboard-section");
 const loginForm = document.getElementById("login-form");
+const registerForm = document.getElementById("register-form");
+const toggleModeBtn = document.getElementById("toggle-mode-btn");
+const portalTitle = document.getElementById("portal-title");
+const portalSubtitle = document.getElementById("portal-subtitle");
 const logoutBtn = document.getElementById("logout-btn");
+const forgotPasswordBtn = document.getElementById("forgot-password-btn");
 const addProductForm = document.getElementById("add-product-form");
 const adminProductsList = document.getElementById("admin-products-list");
 const selectAllCheckbox = document.getElementById("select-all");
@@ -25,17 +32,41 @@ const selectAllCheckbox = document.getElementById("select-all");
 const IMGBB_API_KEY = "7e9c0c1a54ddb131f4cee646b9e6e713";
 
 // ===============================
+// TOGGLE LOGIN / REGISTER VIEW
+// ===============================
+
+let isRegisterMode = false;
+if (toggleModeBtn) {
+    toggleModeBtn.addEventListener("click", () => {
+        isRegisterMode = !isRegisterMode;
+        if (isRegisterMode) {
+            if (portalTitle) portalTitle.textContent = "Create Admin Account";
+            if (portalSubtitle) portalSubtitle.textContent = "Register a new email for store access";
+            if (loginForm) loginForm.classList.add("hidden");
+            if (registerForm) registerForm.classList.remove("hidden");
+            toggleModeBtn.innerHTML = `Already have an admin account? <span class="text-pink-600 underline">Sign In</span>`;
+        } else {
+            if (portalTitle) portalTitle.textContent = "Admin Portal";
+            if (portalSubtitle) portalSubtitle.textContent = "Sign in to manage Twinkle Threads inventory";
+            if (registerForm) registerForm.classList.add("hidden");
+            if (loginForm) loginForm.classList.remove("hidden");
+            toggleModeBtn.innerHTML = `Don't have an admin account? <span class="text-pink-600 underline">Create New Account</span>`;
+        }
+    });
+}
+
+// ===============================
 // AUTH STATE
 // ===============================
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        loginSection.classList.add("hidden");
-        dashboardSection.classList.remove("hidden");
+        if (loginSection) loginSection.classList.add("hidden");
+        if (dashboardSection) dashboardSection.classList.remove("hidden");
         loadAdminProducts();
     } else {
-        loginSection.classList.remove("hidden");
-        dashboardSection.classList.add("hidden");
+        if (loginSection) loginSection.classList.remove("hidden");
+        if (dashboardSection) dashboardSection.classList.add("hidden");
     }
 });
 
@@ -43,106 +74,156 @@ onAuthStateChanged(auth, (user) => {
 // LOGIN
 // ===============================
 
-loginForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
+if (loginForm) {
+    loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-    const email = document.getElementById("admin-email").value;
-    const password = document.getElementById("admin-password").value;
+        const email = document.getElementById("admin-email").value;
+        const password = document.getElementById("admin-password").value;
 
-    try {
-        await signInWithEmailAndPassword(auth, email, password);
-    } catch (error) {
-        alert("Login failed: " + error.message);
-    }
-});
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+        } catch (error) {
+            alert("Login failed: " + error.message);
+        }
+    });
+}
+
+// ===============================
+// REGISTER NEW ADMIN ACCOUNT
+// ===============================
+
+if (registerForm) {
+    registerForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("reg-email").value;
+        const password = document.getElementById("reg-password").value;
+
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            alert("Admin account created successfully!");
+        } catch (error) {
+            alert("Registration failed: " + error.message);
+        }
+    });
+}
+
+// ===============================
+// FORGOT PASSWORD
+// ===============================
+
+if (forgotPasswordBtn) {
+    forgotPasswordBtn.addEventListener("click", async () => {
+        const emailInput = document.getElementById("admin-email");
+        const email = emailInput ? emailInput.value.trim() : "";
+        
+        if (!email) {
+            alert("Please enter your email address in the Login email field first.");
+            return;
+        }
+
+        try {
+            await sendPasswordResetEmail(auth, email);
+            alert("Password reset email sent! Check your inbox.");
+        } catch (error) {
+            alert("Error sending reset email: " + error.message);
+        }
+    });
+}
 
 // ===============================
 // LOGOUT
 // ===============================
 
-logoutBtn.addEventListener("click", async () => {
-    await signOut(auth);
-});
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", async () => {
+        await signOut(auth);
+    });
+}
 
 // ===============================
 // ADD PRODUCT (MULTI-IMAGE SUPPORT)
 // ===============================
 
-addProductForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
+if (addProductForm) {
+    addProductForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-    const name = document.getElementById("p-name").value;
-    const category = document.getElementById("p-category").value;
-    const price = Number(document.getElementById("p-price").value);
-    
-    const sizes = document.getElementById("p-sizes").value.split(",").map(s => s.trim()).filter(Boolean);
-    const colors = document.getElementById("p-colors").value.split(",").map(c => c.trim()).filter(Boolean);
+        const name = document.getElementById("p-name").value;
+        const category = document.getElementById("p-category").value;
+        const price = Number(document.getElementById("p-price").value);
+        
+        const sizes = document.getElementById("p-sizes").value.split(",").map(s => s.trim()).filter(Boolean);
+        const colors = document.getElementById("p-colors").value.split(",").map(c => c.trim()).filter(Boolean);
 
-    const imageInput = document.getElementById("p-image-file");
+        const imageInput = document.getElementById("p-image-file");
 
-    if (!imageInput.files || imageInput.files.length === 0) {
-        return;
-    }
+        if (!imageInput.files || imageInput.files.length === 0) {
+            return;
+        }
 
-    const submitBtn = addProductForm.querySelector("button[type='submit']");
-    const originalBtnText = submitBtn.innerHTML;
-    submitBtn.textContent = "Uploading Images...";
-    submitBtn.disabled = true;
+        const submitBtn = addProductForm.querySelector("button[type='submit']");
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.textContent = "Uploading Images...";
+        submitBtn.disabled = true;
 
-    try {
-        const imageUrls = [];
+        try {
+            const imageUrls = [];
 
-        // Loop through all selected image files and upload each to ImgBB
-        for (const imageFile of imageInput.files) {
-            const formData = new FormData();
-            formData.append("image", imageFile);
+            for (const imageFile of imageInput.files) {
+                const formData = new FormData();
+                formData.append("image", imageFile);
 
-            const response = await fetch(
-                `https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`,
-                {
-                    method: "POST",
-                    body: formData
+                const response = await fetch(
+                    `https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`,
+                    {
+                        method: "POST",
+                        body: formData
+                    }
+                );
+
+                const result = await response.json();
+
+                if (result.success) {
+                    imageUrls.push(result.data.url);
                 }
-            );
-
-            const result = await response.json();
-
-            if (result.success) {
-                imageUrls.push(result.data.url);
             }
+
+            if (imageUrls.length === 0) {
+                throw new Error("Failed to upload images to ImgBB");
+            }
+
+            await addDoc(collection(db, "products"), {
+                name,
+                category,
+                price,
+                sizes,
+                colors,
+                images: imageUrls,
+                isAvailable: true,
+                createdAt: Date.now()
+            });
+
+            addProductForm.reset();
+            loadAdminProducts();
+
+        } catch (error) {
+            console.error("Error adding product:", error);
+        } finally {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
         }
-
-        if (imageUrls.length === 0) {
-            throw new Error("Failed to upload images to ImgBB");
-        }
-
-        await addDoc(collection(db, "products"), {
-            name,
-            category,
-            price,
-            sizes,
-            colors,
-            images: imageUrls, // Array of multiple image URLs
-            isAvailable: true,
-            createdAt: Date.now()
-        });
-
-        addProductForm.reset();
-        loadAdminProducts();
-
-    } catch (error) {
-        console.error("Error adding product:", error);
-    } finally {
-        submitBtn.textContent = originalBtnText;
-        submitBtn.disabled = false;
-    }
-});
+    });
+}
 
 // ===============================
 // LOAD PRODUCTS
 // ===============================
 
 async function loadAdminProducts() {
+    if (!adminProductsList) return;
+
     adminProductsList.innerHTML = `
         <p class="col-span-full text-center text-gray-500 py-6">Loading inventory...</p>
     `;
